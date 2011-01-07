@@ -4,6 +4,9 @@ Craigslist Autoresponder
 
 It searches listings that match your criteria for an email address and phone number. If it can't find the landlord's email address, it scrapes the weblisting for the anonymized email address. It emails a message on your behalf to the landlord, to inquire about the property, and emails you the listing's title, link and the landlord's phone number to you to follow up. Set it up with a cronjob to run periodically, and it takes out 80% of the work involved with looking for a lease on craigslist. 
 
+Feel free to have your way with it, if it suits you. I still need to put together a list of dependancies and a build script, but it's really not hard. I think it has one, maybe two dependencies, and they're googleable. 
+
+To Configure and Use:
 1. Setup your craigslist search the way you want, then get the rss link for it. 
 2. Put that link in at:
 
@@ -18,3 +21,4 @@ It searches listings that match your criteria for an email address and phone num
     gmailPassword = '...'
 
 4. Put another email (or the same) at the bottom of the script, which will be used to issue you notices when the script reaches out on your behalf. You'll get the link, title and phone number of any listing that gets your message. 
+5. Setup a cron to run the script periodically
