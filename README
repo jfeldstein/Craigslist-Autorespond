@@ -1,0 +1,20 @@
+Craigslist Autoresponder
+ - Jordan Feldstein
+
+
+It searches listings that match your criteria for an email address and phone number. If it can't find the landlord's email address, it scrapes the weblisting for the anonymized email address. It emails a message on your behalf to the landlord, to inquire about the property, and emails you the listing's title, link and the landlord's phone number to you to follow up. Set it up with a cronjob to run periodically, and it takes out 80% of the work involved with looking for a lease on craigslist. 
+
+1. Setup your craigslist search the way you want, then get the rss link for it. 
+2. Put that link in at:
+
+  # *** Configure ***
+  craigslist_feed = "http://..."
+
+3. Enter your gmail address and password at: (or any email you have smtp access for. This is what landlords will get email *from*)
+
+  def sendMail()
+    ...
+    gmailUser = '...'
+    gmailPassword = '...'
+
+4. Put another email (or the same) at the bottom of the script, which will be used to issue you notices when the script reaches out on your behalf. You'll get the link, title and phone number of any listing that gets your message. 
